@@ -9,12 +9,12 @@ class SessionHelper:
     def login(self, username, password):
         wd = self.app.wd
         self.app.open_home_page()
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys(username)
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys(password)
+        wd.find_element_by_name("username").click()
+        wd.find_element_by_name("username").clear()
+        wd.find_element_by_name("username").send_keys(username)
+        wd.find_element_by_name("password").click()
+        wd.find_element_by_name("password").clear()
+        wd.find_element_by_name("password").send_keys(password)
         wd.find_element_by_css_selector("input[type='submit']").click()
         # wd.find_element_by_xpath("//input[@value='Login']").click()
 
@@ -27,7 +27,7 @@ class SessionHelper:
 
     def is_logged_in(self):
         wd = self.app.wd
-        time.sleep(0.2)  # добавлено ожидание, чтобы открылась главная страница до начала поиска элемента "Logout"-??
+        time.sleep(2)  # добавлено ожидание, чтобы открылась главная страница до начала поиска элемента "Logout"-??
         return len(wd.find_elements_by_link_text("Logout")) > 0
 
 
@@ -37,12 +37,8 @@ class SessionHelper:
 
     def get_logged_user(self):
         wd = self.app.wd
-        return wd.find_element_by_xpath("//div/div[1]/form/b").text[1:-1]  # находит имя пользователя и отрезает у него круглые скобки у "("+username+")"
+        return wd.find_element_by_css_selector("td.login-info-left span").text  # находим чисый текcт элемента span
 
-        # return wd.find_element_by_xpath("//div[@id='top']/form/b").text == "(%s)" % username   # альтернатива:  ...text == "("+username+")"
-        # return wd.find_element_by_xpath("//div/div[1]/form/b").text == "(%s)" % username
-        # return wd.find_element_by_xpath("//*[@id='top']/form/b").text == "(%s)" % username
-        # return wd.find_element_by_xpath("//b[contains(.,'(admin)')]").text == % username
 
 
 
