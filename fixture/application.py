@@ -2,6 +2,7 @@
 
 from selenium import webdriver
 from fixture.session import SessionHelper
+from fixture.projects import ProjectHelper
 
 
 class Application:
@@ -16,6 +17,9 @@ class Application:
         #self.wd.implicitly_wait(1)
         self.session = SessionHelper(self) # помощник получает ссылку на объект класса Application
                                            # это даст возможность в одном помощнике обращаться к др помощникам
+
+        self.project = ProjectHelper(self)
+
         self.base_url = base_url
 
     def is_valid(self):
