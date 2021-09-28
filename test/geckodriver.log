@@ -2332,3 +2332,47 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1632802207891	geckodriver	INFO	Listening on 127.0.0.1:54253
+1632802210913	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\1977u\\AppData\\Local\\Temp\\rust_mozprofileulNUor"
+1632802212494	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\1977u\\AppData\\Local\\Temp\\rust_mozprofileulNUor\\search.json.mozlz4", (void 0)))
+1632802215994	Marionette	INFO	Listening on port 54261
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x39009A,name=PContent::Msg_InitBackground) Channel closing: too late to send/recv, messages will be lost
+
+1632802216252	Marionette	WARN	TLS certificate errors will be ignored for this session
+1632802227607	Marionette	INFO	Stopped listening on port 54261
+[Parent 268, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1632802236054	geckodriver	INFO	Listening on 127.0.0.1:54329
+1632802239104	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\1977u\\AppData\\Local\\Temp\\rust_mozprofilemf2afj"
+1632802239445	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\1977u\\AppData\\Local\\Temp\\rust_mozprofilemf2afj\\search.json.mozlz4", (void 0)))
+1632802242010	Marionette	INFO	Listening on port 54337
+1632802242297	Marionette	WARN	TLS certificate errors will be ignored for this session
+1632802250921	Marionette	INFO	Stopped listening on port 54337
+[Parent 9816, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1632802286248	geckodriver	INFO	Listening on 127.0.0.1:54406
+1632802289312	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\1977u\\AppData\\Local\\Temp\\rust_mozprofilezgbPqv"
+1632802289607	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\1977u\\AppData\\Local\\Temp\\rust_mozprofilezgbPqv\\search.json.mozlz4", (void 0)))
+1632802292729	Marionette	INFO	Listening on port 54414
+1632802293006	Marionette	WARN	TLS certificate errors will be ignored for this session
+1632802303544	Marionette	INFO	Stopped listening on port 54414
+[Parent 12836, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1632802308560	geckodriver	INFO	Listening on 127.0.0.1:54478
+1632802311591	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\1977u\\AppData\\Local\\Temp\\rust_mozprofileTEd69X"
+1632802311961	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\1977u\\AppData\\Local\\Temp\\rust_mozprofileTEd69X\\search.json.mozlz4", (void 0)))
+1632802314821	Marionette	INFO	Listening on port 54486
+1632802315286	Marionette	WARN	TLS certificate errors will be ignored for this session
+1632802323867	Marionette	INFO	Stopped listening on port 54486
+[Parent 1464, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
