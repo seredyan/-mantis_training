@@ -26,7 +26,7 @@ class JamesHelper:   # video 9_3
 
     class Telnet_session:
         def __init__(self, host, port, username, password):  # это логин и пароль для доступа к почтовому серверу
-            self.telnet = Telnet(host, port, 8)  # цифра - это таймаут ожидания соединения с сервером
+            self.telnet = Telnet(host, port, 6)  # цифра - это таймаут ожидания соединения с сервером
             self.read_until("Login id:")
             self.write(username + "\n")
             self.read_until("Password:")
@@ -35,7 +35,7 @@ class JamesHelper:   # video 9_3
 
 
         def read_until(self, text):
-            self.telnet.read_until(text.encode('ascii'), 8)
+            self.telnet.read_until(text.encode('ascii'), 6)
 
 
         def write(self, text):

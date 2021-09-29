@@ -17,7 +17,7 @@ class Application:
             self.wd.webdriver.Chrome()
         else:
             raise ValueError("Unrecognized browser %s" % browser)
-        self.wd.implicitly_wait(3)
+        self.wd.implicitly_wait(1)
         self.session = SessionHelper(self) # помощник получает ссылку на объект класса Application
                                            # это даст возможность в одном помощнике обращаться к др помощникам
 
