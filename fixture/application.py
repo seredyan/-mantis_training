@@ -3,11 +3,14 @@
 from selenium import webdriver
 from fixture.session import SessionHelper
 from fixture.projects import ProjectHelper
+from fixture.james import JamesHelper
+from fixture.signup import SignupHelper
+from fixture.mail import MailHelper
 
 
 class Application:
 
-    def __init__(self, browser, base_url):     # запуск браузера через этот конструктор
+    def __init__(self, browser, config):     # запуск браузера через этот конструктор
         if browser == "firefox":
             self.wd = webdriver.Firefox()
         elif browser == "chrome":
@@ -18,8 +21,13 @@ class Application:
         self.session = SessionHelper(self) # помощник получает ссылку на объект класса Application
                                            # это даст возможность в одном помощнике обращаться к др помощникам
 
-        self.base_url = base_url
+
+        self.james = JamesHelper(self)
         self.project = ProjectHelper(self)
+        self.signup = SignupHelper(self)
+        self.mail = MailHelper(self)
+        self.config = config
+        self.base_url = config['web']['baseUrl']
 
 
 
