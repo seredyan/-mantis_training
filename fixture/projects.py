@@ -16,7 +16,7 @@ class ProjectHelper:
 
     def create_project(self, project):
         wd = self.app.wd
-        # self.open_projects_page()
+        self.open_projects_page()
         wd.find_element_by_css_selector("input[value='Create New Project']").click()
         time.sleep(0.5)
         self.fill_project_creatings_fields(project)
