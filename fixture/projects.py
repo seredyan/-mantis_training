@@ -29,7 +29,7 @@ class ProjectHelper:
 
     def delete_project(self, index):
         wd = self.app.wd
-        # self.open_projects_page()
+        self.open_projects_page()
         self.select_deletable_project(index)
         wd.find_element_by_css_selector("input[value='Delete Project']").click()
         time.sleep(1)

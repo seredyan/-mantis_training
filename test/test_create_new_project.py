@@ -12,12 +12,14 @@ def random_string(prefix, maxlen):
 
 
 def test_create_project(app):
-    old_projects = app.soap.get_projects_list(username="administrator", password="root")
+    username = app.config["webadmin"]["username"]
+    password = app.config["webadmin"]["password"]
+    old_projects = app.soap.get_projects_list(username, password)
     added_project = Project(name=random_string('name', 10), description=random_string('text', 40))
     app.project.create_project(added_project)
     time.sleep(1)
 
-    new_projects = app.soap.get_projects_list(username="administrator", password="root")
+    new_projects = app.soap.get_projects_list(username, password)
     old_projects.append(added_project)
 
     assert sorted(old_projects, key=Project.id_or_max) == sorted(new_projects, key=Project.id_or_max)

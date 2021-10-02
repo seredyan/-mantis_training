@@ -3,22 +3,27 @@ from model.project import Project
 
 
 
-def test_delete_project_assert_ui(app):
-    if app.soap.get_projects_list(username="administrator", password="root") == []:
+def test_delete_project_assert_soap(app):
+    username = app.config["webadmin"]["username"]
+    password = app.config["webadmin"]["password"]
+
+    if app.soap.get_projects_list(username, password) == []:
         app.project.create_project(Project(name='test_project', description='some text'))
 
-    old_projects = app.soap.get_projects_list(username="administrator", password="root")
+
+    old_projects = app.soap.get_projects_list(username, password)
     deletable_project = random.choice(old_projects)
     app.project.delete_project(old_projects.index(deletable_project))
-    new_projects = app.soap.get_projects_list(username="administrator", password="root")
+    new_projects = app.soap.get_projects_list(username, password)
     old_projects.remove(deletable_project)
 
     assert sorted(old_projects, key=Project.id_or_max) == sorted(new_projects, key=Project.id_or_max)
+    print(old_projects)
+    print(deletable_project)
 
 
 
-
-
+#
 # def test_delete_project_assert_ui(app):
 #     if app.project.get_project_list() == []:
 #         app.project.create_project(Project(name='test_project', description='some text'))

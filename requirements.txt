@@ -1,0 +1,17 @@
+atomicwrites	
+attrs	
+colorama	
+iniconfig	
+packaging	
+ftputil
+jsonpickle
+pluggy	
+py	
+pyparsing	
+pytest	
+selenium	
+setuptools	
+suds-jurko
+toml	
+urllib3	
+wheel	
